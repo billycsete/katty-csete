@@ -50,7 +50,7 @@ h1 {
 h2 {
 	font-weight: $light;
 	font-size: 1.2rem;
-	margin: 0 0 1.5rem 0;
+	margin: 0 0 2rem 0;
 	display: inline-block;
 
 	span {
@@ -90,11 +90,17 @@ p {
 // =================================================
 
 ol, ul {
-	margin: 0 0 1rem 0;
+	margin: 0 0 2rem 0;
 	padding: 0;
 	font-size: 1rem;
 	line-height: 1.4rem;
 	list-style-type: none;
+
+	li.stroke-below {
+		border-bottom: 1px solid #ccc;
+		padding-bottom: rem(8px);
+		margin-bottom: rem(8px);
+	}
 }
 
 ul.list {
