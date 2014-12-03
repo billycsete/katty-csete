@@ -1,0 +1,19 @@
+// =================================================
+//
+// Content
+//
+// =================================================
+
+.content {
+	@include media($medium) {
+		padding-left: 240px;
+	}
+
+	@include media($large) {
+		padding-left: 300px;
+	}
+}
+
+.max-width {
+	max-width: 1000px;
+}

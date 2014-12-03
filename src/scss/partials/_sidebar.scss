@@ -1,0 +1,31 @@
+// =================================================
+//
+// Sidebar
+//
+// =================================================
+
+.sidebar {
+	position: relative;
+	z-index: $z-sidebar;
+	background-color: $grey;
+	color: $white;
+
+	@include clearfix;
+
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+
+	@include media($medium) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 240px;
+		height: 100%;
+	}
+
+	@include media($large) {
+		width: 300px;
+	}
+}

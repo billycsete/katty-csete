@@ -1,0 +1,31 @@
+// =================================================
+//
+// Media
+//
+// =================================================
+
+.media {
+
+	.video-link {
+		margin: 10px 0 30px;
+
+		a {
+			display: inline-block;
+			padding: 0.4em 0.8em;
+			background: $white;
+			color: $grey;
+			text-decoration: none;
+		}
+	}
+}
+
+.no-touch {
+	.media {
+		.video-link {
+			a:hover {
+				background: $teal;
+				color: $white;
+			}
+		}
+	}
+}

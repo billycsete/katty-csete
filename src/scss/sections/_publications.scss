@@ -1,0 +1,32 @@
+// =================================================
+//
+// Publications
+//
+// =================================================
+
+.publications {
+
+	.view-pub {
+		margin: 10px 0 30px;
+
+		a {
+			display: inline-block;
+			padding: 0.4em 0.8em;
+			background: $tan;
+			color: $grey;
+			text-decoration: none;
+		}
+	}
+}
+
+
+.no-touch {
+	.publications {
+		.view-pub {
+			a:hover {
+				background: $teal;
+				color: $white;
+			}
+		}
+	}
+}

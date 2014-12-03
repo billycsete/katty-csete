@@ -1,0 +1,31 @@
+// =================================================
+//
+// Section
+//
+// =================================================
+
+.section {
+	padding: 40px 25px;
+
+	h1, h2 {
+		position: relative;
+		z-index: $positioned;
+		margin-left: -25px;
+	}
+
+	&.tan {
+		background-color: $tan;
+	}
+
+	@include media($medium) {
+		padding: 70px 50px;
+
+		h1, h2 {
+			margin-left: 0px;
+		}
+	}
+
+	@include media($large) {
+		padding: 70px;
+	}
+}
