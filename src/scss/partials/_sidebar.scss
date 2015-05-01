@@ -21,11 +21,11 @@
 		position: fixed;
 		left: 0;
 		top: 0;
-		width: 240px;
+		width: 250px;
 		height: 100%;
 	}
 
 	@include media($large) {
-		width: 300px;
+		width: 350px;
 	}
 }

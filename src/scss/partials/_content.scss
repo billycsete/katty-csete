@@ -6,11 +6,11 @@
 
 .content {
 	@include media($medium) {
-		padding-left: 240px;
+		padding-left: 250px;
 	}
 
 	@include media($large) {
-		padding-left: 300px;
+		padding-left: 350px;
 	}
 }
 

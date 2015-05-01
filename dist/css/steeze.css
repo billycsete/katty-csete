@@ -4,10 +4,11 @@
  * http://williamcsete.com
  *
  */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+html {
   box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
@@ -514,10 +515,10 @@ figure.fluid {
 
 @media screen and (min-width: 760px) {
   .content {
-    padding-left: 240px; } }
+    padding-left: 250px; } }
 @media screen and (min-width: 1200px) {
   .content {
-    padding-left: 300px; } }
+    padding-left: 350px; } }
 
 .max-width {
   max-width: 1000px; }
@@ -544,10 +545,10 @@ figure.fluid {
   z-index: 100;
   background-color: #272a2f;
   color: #ffffff; }
-  .sidebar:after {
+  .sidebar::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   .sidebar a {
     color: #ffffff;
     text-decoration: none; }
@@ -556,20 +557,20 @@ figure.fluid {
       position: fixed;
       left: 0;
       top: 0;
-      width: 240px;
+      width: 250px;
       height: 100%; } }
   @media screen and (min-width: 1200px) {
     .sidebar {
-      width: 300px; } }
+      width: 350px; } }
 
 .sidebar-profile {
   position: relative;
   z-index: 1;
   overflow: hidden; }
-  .sidebar-profile:after {
+  .sidebar-profile::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   .sidebar-profile .sidebar-details {
     padding: 15px 0 15px 25px;
     background: #272a2f; }
@@ -592,26 +593,31 @@ figure.fluid {
     margin-bottom: 0; }
   .sidebar-nav li {
     border-bottom: 1px solid #222222; }
-    .sidebar-nav li a {
-      -webkit-transition: background-color 0.3s ease-in-out;
-      -moz-transition: background-color 0.3s ease-in-out;
-      transition: background-color 0.3s ease-in-out; }
-      .sidebar-nav li a i {
-        padding-left: 0;
-        -webkit-transition: padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-        -moz-transition: padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-        transition: padding 0.3s cubic-bezier(0.77, 0, 0.175, 1); }
-  .sidebar-nav a {
+    .sidebar-nav li .sidebar-link {
+      position: relative;
+      z-index: 1;
+      -webkit-transition: background-color 0.3s ease-in-out, padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+      -moz-transition: background-color 0.3s ease-in-out, padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: background-color 0.3s ease-in-out, padding 0.3s cubic-bezier(0.77, 0, 0.175, 1); }
+      .sidebar-nav li .sidebar-link .icon {
+        position: absolute;
+        z-index: 1;
+        left: 25px;
+        -webkit-transition: left 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+        -moz-transition: left 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: left 0.3s cubic-bezier(0.77, 0, 0.175, 1); }
+  .sidebar-nav .sidebar-link {
     display: block;
-    padding: 12px 25px; }
+    padding: 12px 25px 12px 55px; }
   @media screen and (min-width: 760px) {
     .sidebar-nav {
       display: block; } }
 
-.no-touch .sidebar-nav li a:hover {
-  background-color: #222222; }
-  .no-touch .sidebar-nav li a:hover i {
-    padding-left: 15px; }
+.no-touch .sidebar-nav li .sidebar-link:hover {
+  background-color: #222222;
+  padding-left: 70px; }
+  .no-touch .sidebar-nav li .sidebar-link:hover .icon {
+    left: 40px; }
 
 .intro p {
   max-width: 1000px; }

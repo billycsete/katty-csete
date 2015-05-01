@@ -14,19 +14,23 @@
 	li {
 		border-bottom: 1px solid $dark-grey;
 
-		a {
-			@include transition(background-color 0.3s ease-in-out);
+		.sidebar-link {
+			position: relative;
+			z-index: 1;
+			@include transition(background-color 0.3s ease-in-out, padding 0.3s $ease-in-out-quart);
 
-			i {
-				padding-left: 0;
-				@include transition(padding 0.3s $ease-in-out-quart);
+			.icon {
+				position: absolute;
+				z-index: 1;
+				left: 25px;
+				@include transition(left 0.3s $ease-in-out-quart);
 			}
 		}
 	}
 
-	a {
+	.sidebar-link {
 		display: block;
-		padding: 12px 25px;
+		padding: 12px 25px 12px 55px;
 	}
 
 	@include media($medium) {
@@ -38,10 +42,12 @@
 .no-touch {
 	.sidebar-nav {
 		li {
-			a:hover {
+			.sidebar-link:hover {
 				background-color: $dark-grey;
-				i {
-					padding-left: 15px;
+				padding-left: 70px;
+
+				.icon {
+					left: 40px;
 				}
 			}
 		}
