@@ -6,7 +6,7 @@
 
 .sidebar-profile {
 	position: relative;
-	z-index: $positioned;
+	z-index: 1;
 	overflow: hidden;
 	@include clearfix;
 
@@ -25,9 +25,6 @@
 	}
 
 	@include media($medium) {
-		.sidebar-profile-img {
-			width: 132%;
-		}
 		.sidebar-details {
 			background: $light-grey;
 

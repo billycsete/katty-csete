@@ -372,12 +372,12 @@ html, body {
   color: #272a2f;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     html, body {
       font-size: 18px; } }
 
 h1 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2rem;
   margin: 0 0 0.5rem 0; }
   h1 span {
@@ -387,10 +387,13 @@ h1 {
     padding: 12px 25px; }
 
 h2 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2rem;
   margin: 0 0 2rem 0;
   display: inline-block; }
+  @media screen and (min-width: 760px) {
+    h2 {
+      margin-bottom: 3rem; } }
   h2 span {
     color: #ffffff;
     background-color: #048ac9;
@@ -406,7 +409,7 @@ h3 {
   margin: 0 0 1rem 0; }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.4rem;
   margin: 0 0 1rem 0; }
@@ -417,10 +420,15 @@ ol, ul {
   font-size: 1rem;
   line-height: 1.4rem;
   list-style-type: none; }
+  @media screen and (min-width: 760px) {
+    ol, ul {
+      margin-bottom: 3rem; } }
   ol li.stroke-below, ul li.stroke-below {
     border-bottom: 1px solid #ccc;
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem; }
+  ol.last, ul.last {
+    margin-bottom: 0; }
 
 ul.bullets {
   list-style-type: disc;
@@ -430,6 +438,14 @@ ul.bullets {
 
 a {
   font-size: 1rem; }
+  a.link {
+    text-decoration: none;
+    color: #0aa88f;
+    line-height: 1.4rem;
+    padding: 0.1rem; }
+    a.link:hover {
+      background-color: #0aa88f;
+      color: #ffffff; }
 
 @font-face {
   font-family: 'icons';
@@ -505,7 +521,7 @@ figure.fluid {
 @media screen and (min-width: 760px) {
   .content {
     padding-left: 250px; } }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
   .content {
     padding-left: 350px; } }
 
@@ -525,13 +541,13 @@ figure.fluid {
       padding: 70px 50px; }
       .section h1, .section h2 {
         margin-left: 0px; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     .section {
       padding: 70px; } }
 
 .sidebar {
   position: relative;
-  z-index: 100;
+  z-index: 10;
   background-color: #272a2f;
   color: #ffffff; }
   .sidebar::after {
@@ -548,7 +564,7 @@ figure.fluid {
       top: 0;
       width: 250px;
       height: 100%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     .sidebar {
       width: 350px; } }
 
@@ -569,8 +585,6 @@ figure.fluid {
       margin-bottom: 0;
       line-height: 1.8rem; }
   @media screen and (min-width: 760px) {
-    .sidebar-profile .sidebar-profile-img {
-      width: 132%; }
     .sidebar-profile .sidebar-details {
       background: #3d4044; }
       .sidebar-profile .sidebar-details .name {

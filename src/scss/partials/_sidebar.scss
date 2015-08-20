@@ -6,7 +6,7 @@
 
 .sidebar {
 	position: relative;
-	z-index: $z-sidebar;
+	z-index: 10;
 	background-color: $grey;
 	color: $white;
 
