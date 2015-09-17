@@ -1,5 +1,4 @@
-Katty Csete
-============
+#Katty Csete
 
 Resume website for lil' sis
 
