@@ -17,13 +17,13 @@
 		.sidebar-link {
 			position: relative;
 			z-index: 1;
-			@include transition(background-color 0.3s ease-in-out, padding 0.3s $ease-in-out-quart);
+			transition: background-color 0.3s ease-in-out, padding 0.3s $ease-in-out-quart;
 
 			.icon {
 				position: absolute;
 				z-index: 1;
 				left: 25px;
-				@include transition(left 0.3s $ease-in-out-quart);
+				transition: left 0.3s $ease-in-out-quart;
 			}
 		}
 	}
@@ -33,7 +33,7 @@
 		padding: 12px 25px 12px 55px;
 	}
 
-	@include media($medium) {
+	@include media(medium) {
 		display: block;
 	}
 }
