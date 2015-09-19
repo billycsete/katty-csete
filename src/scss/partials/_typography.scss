@@ -23,7 +23,7 @@ html, body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 
-	@include media($large) {
+	@include media(large) {
 		font-size: 18px;
 	}
 }
@@ -52,7 +52,7 @@ h2 {
 	margin: 0 0 2rem 0;
 	display: inline-block;
 
-	@include media($medium) {
+	@include media(medium) {
 		margin-bottom: 3rem;
 	}
 
@@ -99,14 +99,14 @@ ol, ul {
 	line-height: 1.4rem;
 	list-style-type: none;
 
-	@include media($medium) {
+	@include media(medium) {
 		margin-bottom: 3rem;
 	}
 
 	li.stroke-below {
 		border-bottom: 1px solid #ccc;
-		padding-bottom: rem(8px);
-		margin-bottom: rem(8px);
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	&.last {
@@ -132,13 +132,12 @@ a {
 	font-size: 1rem;
 
 	&.link {
-		text-decoration: none;
-		color: $teal;
+		text-decoration: underline;
+		color: $blue;
 		line-height: 1.4rem;
 		padding: 0.1rem;
 		&:hover {
-			background-color: $teal;
-			color: $white;
+			text-decoration: none;
 		}
 	}
 }

@@ -10,14 +10,14 @@
 	background-color: $grey;
 	color: $white;
 
-	@include clearfix;
+	@include selfclear;
 
 	a {
 		color: $white;
 		text-decoration: none;
 	}
 
-	@include media($medium) {
+	@include media(medium) {
 		position: fixed;
 		left: 0;
 		top: 0;
@@ -25,7 +25,7 @@
 		height: 100%;
 	}
 
-	@include media($large) {
+	@include media(large) {
 		width: 350px;
 	}
 }
