@@ -18,6 +18,10 @@
 			position: relative;
 			z-index: 1;
 			transition: background-color 0.3s ease-in-out, padding 0.3s $ease-in-out-quart;
+			font-size: 0.8rem;
+			@include media(large) {
+				font-size: 0.9rem;
+			}
 
 			.icon {
 				position: absolute;
@@ -30,7 +34,10 @@
 
 	.sidebar-link {
 		display: block;
-		padding: 12px 25px 12px 55px;
+		padding: 6px 20px 6px 50px;
+		@include media(large) {
+			padding: 10px 25px 10px 55px;
+		}
 	}
 
 	@include media(medium) {
@@ -44,10 +51,16 @@
 		li {
 			.sidebar-link:hover {
 				background-color: $dark-grey;
-				padding-left: 70px;
+				padding-left: 60px;
+				@include media(large) {
+					padding-left: 70px;
+				}
 
 				.icon {
-					left: 40px;
+					left: 35px;
+					@include media(large) {
+						left: 40px;
+					}
 				}
 			}
 		}

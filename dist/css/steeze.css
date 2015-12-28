@@ -404,7 +404,7 @@ html, body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   html, body {
     font-size: 18px;
   }
@@ -460,7 +460,6 @@ p {
 ol, ul {
   margin: 0 0 2.5rem 0;
   padding: 0;
-  font-size: 1rem;
   line-height: 1.4rem;
   list-style-type: none;
 }
@@ -590,7 +589,7 @@ figure.fluid img {
     padding-left: 250px;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   .content {
     padding-left: 350px;
   }
@@ -619,7 +618,7 @@ figure.fluid img {
     margin-left: 0px;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   .section {
     padding: 70px;
   }
@@ -645,11 +644,11 @@ figure.fluid img {
     position: fixed;
     left: 0;
     top: 0;
-    width: 250px;
+    width: 260px;
     height: 100%;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   .sidebar {
     width: 350px;
   }
@@ -665,12 +664,39 @@ figure.fluid img {
   display: table;
   clear: both;
 }
+.sidebar-profile .sidebar-profile-img {
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 660px) {
+  .sidebar-profile .sidebar-profile-img img {
+    margin: -6px 0;
+  }
+}
 .sidebar-profile .sidebar-details {
-  padding: 15px 0 15px 25px;
+  position: relative;
+  z-index: 2;
+  padding: 10px 0 10px 22px;
   background: #272a2f;
 }
-.sidebar-profile .sidebar-details .name {
+@media (min-width: 1400px) {
+  .sidebar-profile .sidebar-details {
+    padding: 15px 0 15px 25px;
+    font-size: 0.9rem;
+  }
+}
+.sidebar-profile .sidebar-details .sidebar-profile-name {
   display: none;
+}
+.sidebar-profile .sidebar-details .sidebar-profile-name,
+.sidebar-profile .sidebar-details .sidebar-profile-link {
+  font-size: 0.9rem;
+}
+@media (min-width: 1400px) {
+  .sidebar-profile .sidebar-details .sidebar-profile-name,
+  .sidebar-profile .sidebar-details .sidebar-profile-link {
+    font-size: 1rem;
+  }
 }
 .sidebar-profile .sidebar-details ul {
   margin-bottom: 0;
@@ -680,7 +706,7 @@ figure.fluid img {
   .sidebar-profile .sidebar-details {
     background: #3d4044;
   }
-  .sidebar-profile .sidebar-details .name {
+  .sidebar-profile .sidebar-details .sidebar-profile-name {
     display: block;
   }
 }
@@ -699,6 +725,12 @@ figure.fluid img {
   z-index: 1;
   -webkit-transition: background-color 0.3s ease-in-out, padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
           transition: background-color 0.3s ease-in-out, padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  font-size: 0.8rem;
+}
+@media (min-width: 1400px) {
+  .sidebar-nav li .sidebar-link {
+    font-size: 0.9rem;
+  }
 }
 .sidebar-nav li .sidebar-link .icon {
   position: absolute;
@@ -709,7 +741,12 @@ figure.fluid img {
 }
 .sidebar-nav .sidebar-link {
   display: block;
-  padding: 12px 25px 12px 55px;
+  padding: 6px 20px 6px 50px;
+}
+@media (min-width: 1400px) {
+  .sidebar-nav .sidebar-link {
+    padding: 10px 25px 10px 55px;
+  }
 }
 @media (min-width: 660px) {
   .sidebar-nav {
@@ -719,10 +756,20 @@ figure.fluid img {
 
 .no-touch .sidebar-nav li .sidebar-link:hover {
   background-color: #222222;
-  padding-left: 70px;
+  padding-left: 60px;
+}
+@media (min-width: 1400px) {
+  .no-touch .sidebar-nav li .sidebar-link:hover {
+    padding-left: 70px;
+  }
 }
 .no-touch .sidebar-nav li .sidebar-link:hover .icon {
-  left: 40px;
+  left: 35px;
+}
+@media (min-width: 1400px) {
+  .no-touch .sidebar-nav li .sidebar-link:hover .icon {
+    left: 40px;
+  }
 }
 
 .intro p {
