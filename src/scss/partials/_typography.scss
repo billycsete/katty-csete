@@ -112,13 +112,20 @@ ol, ul {
 
 	li.stroke-below {
 		border-bottom: 1px solid #ccc;
-		padding-bottom: 1rem;
-		margin-bottom: 1rem;
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
 	}
 	li.stroke-above {
 		border-top: 1px solid #ccc;
-		padding-top: 1rem;
-		margin-top: 1rem;
+		padding-top: 2em;
+		margin-top: 2rem;
+	}
+
+	li.space-below {
+		margin-bottom: 0.5rem;
+	}
+	li.space-above {
+		margin-bottom: 0.5rem;
 	}
 
 	&.last {
