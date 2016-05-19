@@ -400,18 +400,23 @@ th {
 html, body {
   font-size: 16px;
   font-family: 'proxima-nova', 'Helvetica', 'sans-serif';
+  font-weight: 300;
   color: #272a2f;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   html, body {
     font-size: 18px;
   }
 }
 
+strong {
+  font-weight: 700;
+}
+
 h1 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 2rem;
   margin: 0 0 0.5rem 0;
 }
@@ -427,11 +432,7 @@ h2 {
   font-size: 1.2rem;
   margin: 0 0 2rem 0;
   display: inline-block;
-}
-@media (min-width: 660px) {
-  h2 {
-    margin-bottom: 3rem;
-  }
+  letter-spacing: 0.5px;
 }
 h2 span {
   color: #ffffff;
@@ -445,33 +446,41 @@ h2 span.teal {
 
 h3 {
   font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin: 0 0 0.4rem 0;
+}
+
+h4 {
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.4rem 0;
 }
 
 p {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.4rem;
   margin: 0 0 1rem 0;
 }
 
 ol, ul {
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 2rem 0;
   padding: 0;
+  font-size: 1rem;
   line-height: 1.4rem;
   list-style-type: none;
-}
-@media (min-width: 660px) {
-  ol, ul {
-    margin-bottom: 3rem;
-  }
 }
 ol li.stroke-below, ul li.stroke-below {
   border-bottom: 1px solid #ccc;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+}
+ol li.stroke-above, ul li.stroke-above {
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  margin-top: 1rem;
 }
 ol.last, ul.last {
   margin-bottom: 0;
@@ -586,10 +595,10 @@ figure.fluid img {
 
 @media (min-width: 660px) {
   .content {
-    padding-left: 250px;
+    padding-left: 300px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   .content {
     padding-left: 350px;
   }
@@ -618,7 +627,7 @@ figure.fluid img {
     margin-left: 0px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   .section {
     padding: 70px;
   }
@@ -644,11 +653,11 @@ figure.fluid img {
     position: fixed;
     left: 0;
     top: 0;
-    width: 260px;
+    width: 300px;
     height: 100%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   .sidebar {
     width: 350px;
   }
@@ -679,24 +688,13 @@ figure.fluid img {
   padding: 10px 0 10px 22px;
   background: #272a2f;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   .sidebar-profile .sidebar-details {
     padding: 15px 0 15px 25px;
-    font-size: 0.9rem;
   }
 }
 .sidebar-profile .sidebar-details .sidebar-profile-name {
   display: none;
-}
-.sidebar-profile .sidebar-details .sidebar-profile-name,
-.sidebar-profile .sidebar-details .sidebar-profile-link {
-  font-size: 0.9rem;
-}
-@media (min-width: 1400px) {
-  .sidebar-profile .sidebar-details .sidebar-profile-name,
-  .sidebar-profile .sidebar-details .sidebar-profile-link {
-    font-size: 1rem;
-  }
 }
 .sidebar-profile .sidebar-details ul {
   margin-bottom: 0;
@@ -725,12 +723,6 @@ figure.fluid img {
   z-index: 1;
   -webkit-transition: background-color 0.3s ease-in-out, padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
           transition: background-color 0.3s ease-in-out, padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  font-size: 0.8rem;
-}
-@media (min-width: 1400px) {
-  .sidebar-nav li .sidebar-link {
-    font-size: 0.9rem;
-  }
 }
 .sidebar-nav li .sidebar-link .icon {
   position: absolute;
@@ -743,7 +735,7 @@ figure.fluid img {
   display: block;
   padding: 6px 20px 6px 50px;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   .sidebar-nav .sidebar-link {
     padding: 10px 25px 10px 55px;
   }
@@ -758,7 +750,7 @@ figure.fluid img {
   background-color: #222222;
   padding-left: 60px;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   .no-touch .sidebar-nav li .sidebar-link:hover {
     padding-left: 70px;
   }
@@ -766,7 +758,7 @@ figure.fluid img {
 .no-touch .sidebar-nav li .sidebar-link:hover .icon {
   left: 35px;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1000px) {
   .no-touch .sidebar-nav li .sidebar-link:hover .icon {
     left: 40px;
   }

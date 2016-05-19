@@ -5,10 +5,10 @@
 // =================================================
 
 .sidebar-profile {
+	@include selfclear;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
-	@include selfclear;
 
 	.sidebar-profile-img {
 		position: relative;
@@ -28,19 +28,10 @@
 
 		@include media(large) {
 			padding: 15px 0 15px 25px;
-			font-size: 0.9rem;
 		}
 
 		.sidebar-profile-name {
 			display: none;
-		}
-
-		.sidebar-profile-name,
-		.sidebar-profile-link {
-			font-size: 0.9rem;
-			@include media(large) {
-				font-size: 1rem;
-			}
 		}
 
 		ul {

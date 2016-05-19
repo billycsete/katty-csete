@@ -8,6 +8,7 @@
 // Weights
 // =================================================
 
+$light: 300;
 $normal: 400;
 $bold: 700;
 
@@ -19,6 +20,7 @@ $bold: 700;
 html, body {
 	font-size: 16px;
 	font-family: 'proxima-nova', 'Helvetica', 'sans-serif';
+	font-weight: $light;
 	color: $grey;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -29,12 +31,17 @@ html, body {
 }
 
 
+strong {
+	font-weight: $bold;
+}
+
+
 // =================================================
 // Headlines
 // =================================================
 
 h1 {
-	font-weight: $normal;
+	font-weight: $light;
 	font-size: 2rem;
 	margin: 0 0 0.5rem 0;
 
@@ -51,10 +58,7 @@ h2 {
 	font-size: 1.2rem;
 	margin: 0 0 2rem 0;
 	display: inline-block;
-
-	@include media(medium) {
-		margin-bottom: 3rem;
-	}
+	letter-spacing: 0.5px;
 
 	span {
 		color: $white;
@@ -70,9 +74,16 @@ h2 {
 
 h3 {
 	font-weight: $bold;
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+	margin: 0 0 0.4rem 0;
+}
+
+h4 {
+	font-weight: $light;
 	font-size: 1rem;
 	line-height: 1.4rem;
-	margin: 0 0 1rem 0;
+	margin: 0 0 0.4rem 0;
 }
 
 
@@ -81,7 +92,7 @@ h3 {
 // =================================================
 
 p {
-	font-weight: $normal;
+	font-weight: $light;
 	font-size: 1rem;
 	line-height: 1.4rem;
 	margin: 0 0 1rem 0;
@@ -93,19 +104,21 @@ p {
 // =================================================
 
 ol, ul {
-	margin: 0 0 2.5rem 0;
+	margin: 0 0 2rem 0;
 	padding: 0;
+	font-size: 1rem;
 	line-height: 1.4rem;
 	list-style-type: none;
-
-	@include media(medium) {
-		margin-bottom: 3rem;
-	}
 
 	li.stroke-below {
 		border-bottom: 1px solid #ccc;
 		padding-bottom: 1rem;
 		margin-bottom: 1rem;
+	}
+	li.stroke-above {
+		border-top: 1px solid #ccc;
+		padding-top: 1rem;
+		margin-top: 1rem;
 	}
 
 	&.last {
