@@ -1,0 +1,26 @@
+// =================================================
+//
+// Button
+//
+// =================================================
+
+.button {
+	display: inline-block;
+	margin-top: 20px;
+	text-decoration: none;
+	color: #666;
+	background: $tan;
+	padding-right: 14px;
+
+	&:hover {
+		color: $grey;
+	}
+
+	.icon {
+		color: #fff;
+		background-color: $teal;
+		display: inline-block;
+		padding: 3px 0 3px 5px;
+		margin-right: 4px;
+	}
+}
