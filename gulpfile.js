@@ -66,7 +66,6 @@ gulp.task('images', function() {
 gulp.task('copy', function() {
 	gulp.src('src/*.html').pipe(gulp.dest('dist/'));
 	gulp.src('src/fonts/**').pipe(gulp.dest('dist/fonts/'));
-	gulp.src('src/pdf/**').pipe(gulp.dest('dist/pdf/'));
 });
 
 
@@ -79,7 +78,7 @@ gulp.task('clean', function(cb) {
 // Default task
 gulp.task('default', ['clean'], function() {
 	gulp.start('styles', 'jshint', 'scripts', 'images', 'copy');
-	notifier.notify({ title: 'Burp!', message: 'that was a big gulp, brah.' });
+	notifier.notify({ title: 'Gulp', message: 'default task complete.' });
 });
 
 
@@ -97,7 +96,7 @@ gulp.task('watch', function() {
 	livereload.listen();
 	// Watch any files in dist/, reload on change
 	gulp.watch(['dist/**']).on('change', function(){
-		livereload.changed('Dat website be');
+		livereload.changed('Page');
 		notifier.notify({ title: 'Yo doooode!', message: 'that website changed.' });
 	});
 });
