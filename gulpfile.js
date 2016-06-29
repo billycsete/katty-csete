@@ -10,7 +10,7 @@ var imagemin     = require('gulp-imagemin');
 var rename       = require('gulp-rename');
 var concat       = require('gulp-concat');
 var cache        = require('gulp-cache');
-var livereload   = require('gulp-livereload');
+var browserSync  = require('browser-sync').create();
 var browserify   = require('browserify');
 var del          = require('del');
 var notifier     = require('node-notifier');
@@ -19,7 +19,7 @@ var buffer       = require('vinyl-buffer');
 
 
 // CSS Task
-gulp.task('styles', function() {
+gulp.task('css', function() {
 	return sass('src/scss/steeze.scss', { style: 'expanded' })
 		.pipe(autoprefixer('last 2 version'))
 		.pipe(gulp.dest('dist/css/'))
@@ -30,7 +30,7 @@ gulp.task('styles', function() {
 
 
 // Lint JS
-gulp.task('jshint', function() {
+gulp.task('lint', function() {
 	return gulp.src('src/js/**/*.js')
 		.pipe(jshint('.jshintrc'))
 		.pipe(jshint.reporter('default'))
@@ -38,7 +38,7 @@ gulp.task('jshint', function() {
 
 
 // Build JS
-gulp.task('scripts', function () {
+gulp.task('js', function () {
 	var b = browserify({
 		entries: 'src/js/main.js',
 		debug: true
@@ -77,26 +77,28 @@ gulp.task('clean', function(cb) {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-	gulp.start('styles', 'jshint', 'scripts', 'images', 'copy');
-	notifier.notify({ title: 'Gulp', message: 'default task complete.' });
+	gulp.start('css', 'lint', 'js', 'images', 'copy');
+	// notifier.notify({ title: 'Gulp', message: 'default task complete.' });
 });
 
 
 // Watch
 gulp.task('watch', function() {
-	// Watch .scss files
-	gulp.watch('src/scss/**/*.scss', ['styles']);
-	// Watch .js files
-	gulp.watch('src/js/**/*.js', ['jshint', 'scripts']);
-	// Watch image files
-	gulp.watch('src/images/**/*', ['images']);
-	// Watch .html files
-	gulp.watch('src/*.html', ['copy']);
-	// Create LiveReload server
-	livereload.listen();
-	// Watch any files in dist/, reload on change
-	gulp.watch(['dist/**']).on('change', function(){
-		livereload.changed('Page');
-		notifier.notify({ title: 'Yo doooode!', message: 'that website changed.' });
+	// Start browserSync
+	browserSync.init({
+		server: {
+			baseDir: "./dist/",
+			index: "index.html"
+		}
 	});
+
+	// Watch .scss files
+	gulp.watch('src/scss/**/*.scss', ['css', browserSync.reload]);
+	// Watch .js files
+	gulp.watch('src/js/**/*.js', ['lint', 'js', browserSync.reload]);
+	// Watch image files
+	gulp.watch('src/images/**/*', ['images', browserSync.reload]);
+	// Watch .html files
+	gulp.watch('src/*.html', ['copy', browserSync.reload]);
+
 });

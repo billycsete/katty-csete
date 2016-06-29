@@ -9,6 +9,7 @@
     "url": "https://github.com/wcsete/katty-csete.git"
   },
   "devDependencies": {
+    "browser-sync": "^2.13.0",
     "browserify": "^11.0.1",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
@@ -17,7 +18,6 @@
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-jshint": "^1.11.2",
-    "gulp-livereload": "^3.8.0",
     "gulp-minify-css": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^1.0.5",
