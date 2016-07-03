@@ -42,7 +42,7 @@
 		} ?>
 	</div><!--/content-->
 
-	<?php echo js('assets/js/main.min.js') ?>
+	<?php echo js('assets/js/main-min.js') ?>
 </body>
 </html>
 
