@@ -5,7 +5,7 @@
 // =================================================
 
 .section {
-	padding: 40px 25px;
+	padding: 40px 25px 20px;
 
 	h1, h2 {
 		position: relative;
@@ -18,7 +18,7 @@
 	}
 
 	@include media(medium) {
-		padding: 70px 50px;
+		padding: 70px 50px 50px;
 
 		h1, h2 {
 			margin-left: 0px;
@@ -26,6 +26,6 @@
 	}
 
 	@include media(large) {
-		padding: 70px;
+		padding: 70px 70px 50px;
 	}
 }

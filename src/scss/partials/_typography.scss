@@ -121,19 +121,22 @@ ol, ul {
 		margin-top: 2rem;
 	}
 
+	// no stokes above the first ul in a section
+	&:first-of-type li.stroke-above {
+		border-top: none;
+		padding-top: 0;
+		margin-top: 0;
+	}
+
 	li.space-below {
 		margin-bottom: 0.5rem;
 	}
 	li.space-above {
 		margin-bottom: 0.5rem;
 	}
-
-	&.last {
-		margin-bottom: 0;
-	}
 }
 
-ul.bullets {
+.bullets ul {
 	list-style-type: disc;
 	padding-left: 1.2rem;
 

@@ -1,0 +1,15 @@
+title: Home
+pages: false
+fields:
+  page_title:
+    label: Page Title
+    type:  text
+    help: the page title inside the browser tab
+  description:
+    label: Description
+    type:  textarea
+    help: shows up in search results
+  keywords:
+    label: Keywords
+    type:  tags
+    help: keywords for search engines to help find your site

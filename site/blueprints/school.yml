@@ -1,0 +1,17 @@
+title: School
+pages: false
+files:
+  sortable: true
+fields:
+  degree:
+    label: Degree/Program
+    type: text
+  school:
+    label: School Name
+    type:  text
+  location:
+    label: Location
+    type:  text
+  graduation:
+    label: Date of Attendance / Graduation Date
+    type:  text

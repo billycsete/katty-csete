@@ -1,0 +1,12 @@
+title: Intro Section
+pages: false
+fields:
+  name:
+    label: Your Full Name
+    type:  text
+  profession:
+    label: Profession
+    type:  text
+  bio:
+    label: Short Bio
+    type:  textarea

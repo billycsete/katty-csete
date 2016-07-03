@@ -1,0 +1,15 @@
+title: Skills Section
+pages: false
+fields:
+  skills_heading:
+    label: Skills Heading
+    type:  text
+  skills_text:
+    label: Skills List
+    type:  textarea
+  development_heading:
+    label: Areas for Future Development Heading
+    type:  text
+  development_text:
+    label: Areas for Future Development List
+    type:  textarea
