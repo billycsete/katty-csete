@@ -1,0 +1,8 @@
+title: Work Section
+pages:
+  template: job
+files: false
+fields:
+  work_heading:
+    label: Work Section Heading
+    type:  text

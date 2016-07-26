@@ -1,0 +1,9 @@
+title: Goals Section
+pages: false
+fields:
+  goals_heading:
+    label: Goals Section Heading
+    type:  text
+  goals_list:
+    label: Goals List
+    type:  textarea

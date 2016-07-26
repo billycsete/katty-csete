@@ -1,0 +1,8 @@
+title: Certifications Section
+pages:
+  template: certification
+files: false
+fields:
+  certifications_heading:
+    label: Certifications Section Heading
+    type:  text

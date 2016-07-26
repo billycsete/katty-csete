@@ -10,7 +10,6 @@ var imagemin     = require('gulp-imagemin');
 var rename       = require('gulp-rename');
 var concat       = require('gulp-concat');
 var cache        = require('gulp-cache');
-var browserSync  = require('browser-sync').create();
 var browserify   = require('browserify');
 var del          = require('del');
 var notifier     = require('node-notifier');
@@ -22,10 +21,10 @@ var buffer       = require('vinyl-buffer');
 gulp.task('css', function() {
 	return sass('src/scss/steeze.scss', { style: 'expanded' })
 		.pipe(autoprefixer('last 2 version'))
-		.pipe(gulp.dest('dist/css/'))
+		.pipe(gulp.dest('assets/css/'))
 		.pipe(rename({suffix: '-min'}))
 		.pipe(minifycss())
-		.pipe(gulp.dest('dist/css/'))
+		.pipe(gulp.dest('assets/css/'))
 });
 
 
@@ -47,10 +46,10 @@ gulp.task('js', function () {
 	return b.bundle()
 		.pipe(source('main.js'))
 		.pipe(buffer())
-		.pipe(gulp.dest('dist/js/'))
+		.pipe(gulp.dest('assets/js/'))
 		.pipe(rename({suffix: '-min'}))
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/js/'))
+		.pipe(gulp.dest('assets/js/'))
 });
 
 
@@ -58,20 +57,21 @@ gulp.task('js', function () {
 gulp.task('images', function() {
 	return gulp.src('src/images/**/*')
 		.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-		.pipe(gulp.dest('dist/images/'))
+		.pipe(gulp.dest('assets/images/'))
 });
 
 
 // Copy HTML and font files
 gulp.task('copy', function() {
-	gulp.src('src/*.html').pipe(gulp.dest('dist/'));
-	gulp.src('src/fonts/**').pipe(gulp.dest('dist/fonts/'));
+	gulp.src('src/*.html').pipe(gulp.dest('assets/'));
+	gulp.src('src/fonts/**').pipe(gulp.dest('assets/fonts/'));
+	gulp.src('src/avatars/**').pipe(gulp.dest('assets/avatars/'));
 });
 
 
-// Clean out /dist/ directory
+// Clean out /assets/ directory
 gulp.task('clean', function(cb) {
-	del(['dist/**/*'], cb)
+	del(['assets/**/*'], cb)
 });
 
 
@@ -84,21 +84,11 @@ gulp.task('default', ['clean'], function() {
 
 // Watch
 gulp.task('watch', function() {
-	// Start browserSync
-	browserSync.init({
-		server: {
-			baseDir: "./dist/",
-			index: "index.html"
-		}
-	});
-
 	// Watch .scss files
-	gulp.watch('src/scss/**/*.scss', ['css', browserSync.reload]);
+	gulp.watch('src/scss/**/*.scss', ['css']);
 	// Watch .js files
-	gulp.watch('src/js/**/*.js', ['lint', 'js', browserSync.reload]);
+	gulp.watch('src/js/**/*.js', ['lint', 'js']);
 	// Watch image files
-	gulp.watch('src/images/**/*', ['images', browserSync.reload]);
-	// Watch .html files
-	gulp.watch('src/*.html', ['copy', browserSync.reload]);
+	gulp.watch('src/images/**/*', ['images']);
 
 });

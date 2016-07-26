@@ -1,0 +1,14 @@
+title: Certification
+pages: false
+files:
+  sortable: true
+fields:
+  cert_name:
+    label: Certification or Membership Type
+    type:  text
+  cert_org:
+    label: Organization Name
+    type:  text
+  cert_date:
+    label: Membership or Certification Date(s)
+    type:  text

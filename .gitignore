@@ -56,3 +56,9 @@ bower_components
 node_modules
 lib
 .codekit-cache
+
+# Kirby #
+###########
+/site/accounts
+/assets/avatars
+/thumbs/*

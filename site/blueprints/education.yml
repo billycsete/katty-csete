@@ -1,0 +1,8 @@
+title: Education Section
+pages:
+  template: school
+files: false
+fields:
+  education_heading:
+    label: Education Section Heading
+    type:  text

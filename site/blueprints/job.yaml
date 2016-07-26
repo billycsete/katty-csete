@@ -1,0 +1,24 @@
+title: Job
+pages: false
+files:
+  sortable: true
+fields:
+  job_title:
+    label: Job Title
+    type:  text
+    help: 'Example: Web Developer'
+  workplace:
+    label: Workplace
+    type:  text
+    help: 'Example: Apple Inc'
+  location:
+    label: Location
+    type:  text
+    help: 'Example: Solvang, CA'
+  job_date:
+    label: Date Range
+    type:  text
+    help: 'Example : March 2000 - March 3000'
+  job_description:
+    label: Job Description
+    type:  textarea

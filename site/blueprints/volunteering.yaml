@@ -1,0 +1,8 @@
+title: Volunteering Section
+pages:
+  template: volunteer
+files: false
+fields:
+  volunteering_heading:
+    label: Volunteering Section Heading
+    type:  text
